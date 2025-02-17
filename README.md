@@ -96,8 +96,19 @@ streamlit run app.py
 ```
 omar-yyoussef-arabic_rag/
 ├── app.py               # Streamlit application
-├── main.py              # Core logic for processing and embeddings
-└── requirements.txt     # Dependencies
+├── config.py            # Configuration file for API keys, model paths, etc.
+├── main.py              # Core logic for processing images, PDFs, and embeddings
+├── requirements.txt     # Dependencies
+├── models/              # Folder for model-related files
+│   ├── embedding_model.py   # Embedding model (e.g., AraBert)
+│   ├── reranker_model.py    # Reranker model
+│   └── __pycache__/      # Cached files for compiled models
+└── utils/               # Helper functions
+    ├── ocr_utils.py     # OCR-related utility functions
+    ├── retriever.py     # Functions related to document retrieval
+    ├── text_processing.py  # Text chunking and processing utilities
+    ├── vector_store.py  # Functions for working with ChromaDB and vector storage
+    └── __pycache__/      # Cached utility files
 ```
 
 ---
