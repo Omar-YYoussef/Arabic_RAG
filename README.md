@@ -64,6 +64,9 @@ streamlit run app.py
 📝 Enter your question in the **text input field**.  
 💡 The system will generate a response based on the extracted text.
 
+📂 **No upload required if data exists in ChromaDB**:
+🔹 If ChromaDB already has stored data, you can immediately start asking questions **after clicking "Check ChromaDB Status"**.
+
 ### 🔄 Reset the system:
 🔃 Use the **"Reset"** button to clear the session and start over.
 
