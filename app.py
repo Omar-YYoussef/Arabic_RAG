@@ -1,8 +1,8 @@
-from main import process_image_and_create_embeddings, process_pdf_and_create_embeddings, generate_response,check_chromadb_status
+# app.py
 import streamlit as st
-import google.generativeai as genai
-import os
+from main import process_image_and_create_embeddings, process_pdf_and_create_embeddings, generate_response, check_chromadb_status
 import tempfile
+import os
 
 # Initialize session state variables if they don't exist
 if 'compression_retriever' not in st.session_state:
@@ -14,18 +14,11 @@ if 'uploaded_file' not in st.session_state:
 if 'chromadb_exists' not in st.session_state:
     st.session_state.chromadb_exists = False
 
-# Configure API key
-genai.configure(api_key='your_api_key')
-
-
-
 def reset_state():
     """Reset all session state variables and clean up"""
     st.session_state.compression_retriever = None
     st.session_state.file_processed = False
     st.session_state.uploaded_file = None
-
-
 
 def main():
     st.title("Document Question Answering System")
